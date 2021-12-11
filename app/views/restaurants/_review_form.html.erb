@@ -1,0 +1,11 @@
+<%= simple_form_for([@restaurant, @review], class: 'form-resto') do |f| %>
+  <div class="form-group">
+    <%= f.label :content, class: 'form-label' %>
+    <%= f.text_area :content, class: 'form-control-lg w-100' %>
+  </div>
+  <div class="from-group">
+    <%= f.label :rating, class: 'form-label' %>
+    <%= f.number_field :rating, in: 0..5, class: 'form-control-lg w-100' %>
+  </div>
+  <%= f.submit class: 'btn btn-warning w-100 text-center my-3 radius' %>
+<% end %>

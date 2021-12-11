@@ -1,8 +1,27 @@
-<h1><%= @restaurant.name %></h1>
-<p>Category: <%= @restaurant.category %></p>
-<p>Address: <%= @restaurant.address %></p>
-<p>Phone number: <%= @restaurant.phone_number %></p>
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %> |
-<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=@restaurant.img_url%>);">
+  <div class="container">
+    <h1><%= @restaurant.name %></h1>
+    <p><strong>Category:</strong> <%= @restaurant.category %></p>
+    <p><strong>Address:</strong> <%= @restaurant.address %></p>
+    <p><strong>Phone number:</strong> <%= @restaurant.phone_number %></p>
+    <%= link_to 'Edit', edit_restaurant_path(@restaurant), class:"btn btn-info radius"%>
+    <%= link_to 'Back', restaurants_path, class:"btn btn-warning radius"%>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 bg-white my-3 rounded border shadow py-3">
+      <h2>Create a review</h2>
+      <%= render "review_form", restaurant: @restaurant, review: @review  %>
+      <% if @restaurant.reviews.size.positive? %>
+        <h2>Restaurant reviews</h2>
+        <ul class="list">
+          <% @restaurant.reviews.each do |review| %>
+            <li class="review"><%= review.rating %>/5 - <%= review.content %> - <%= link_to "supprimer", method: :delete %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'footer' %>

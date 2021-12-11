@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :restaurants do
-    resources :reviews, only: [ :new, :create ]
+    collection do
+      get :avis
+      get :rating
+    end
+    resources :reviews, only: [ :create ]
   end
 end

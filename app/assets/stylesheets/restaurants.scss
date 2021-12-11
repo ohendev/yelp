@@ -1,3 +1,217 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background-color: goldenrod;
+}
+
+.bg-gold {
+  background-color: beige;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: goldenrod;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.radius {
+  border-radius: 50px;
+}
+
+.list { 
+  margin: 0; padding: 0;
+}
+
+.restaurant {
+  list-style-type: none;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+  background-color: goldenrod;
+  border-radius: 8px;
+  font-size: 30px;
+  &:hover {
+    background-color: gold;
+  }
+}
+.restaurant > a {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 8px 8px 32px;
+  border-radius: 8px;
+  background-color: beige;
+  text-decoration: none;
+  color: rgb(37, 34, 34);
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin: 8px 0;
+}
+
+#new_review {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.review {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgb(255, 254, 240);
+  color: rgb(35, 37, 0);
+  border: 1px solid rgb(235, 228, 135);
+  margin: 2px 0;
+  list-style-type: none;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip a > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  text-align: left !important;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip h2 > a {
+  text-decoration: none;
+  color: rgb(90, 66, 0);
+  &:hover {
+    color: rgb(168, 125, 5);
+  }
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-right > h2, .card-trip-right > p {
+  text-align:  right;
+  
+}
+
+.card-trip-right > h2 {
+  color: rgb(90, 66, 0);
+}
+
+.card-trip-right p > a {
+  background-color: brown;
+  display: inline-block;
+  color: white;
+  border-radius: 8px;
+  padding: 2px 8px;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    background-color:crimson;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.footer {
+  background: #180f00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: whitesmoke;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: goldenrod;
+  opacity: 0.3;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}

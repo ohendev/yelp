@@ -1,2 +1,15 @@
-<h1>Add a restaurant</h1>
-<%= render "form", restaurant: @restaurant %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.metro-online.com/nextcms/-/media/Project/MCW/FR_Metro/Images/services-inspirations/metro/univers-produits/equipement-salle/header/equipement-salle.jpg?rev=c8ee379c961e45f39b9781c2f3c0c154&w=1416&hash=9CFE532D5CB2D9CD0BCA0FFAC5444126);">
+  <div class="container">
+    <h1>Add a New Restaurant</h1>
+    <p>Please enter the new restaurant's details below.</p>
+    <%= link_to "back", restaurants_path, class: 'btn btn-warning radius' %>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 bg-white my-3 rounded border shadow py-3">
+      <h2>New Restaurant details</h2>
+      <%= render "form", restaurant: @restaurant %>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,9 @@
     <%= link_to "Add new restaurant", new_restaurant_path, class: 'btn btn-warning radius' %>
     <%= link_to "More reviews first", avis_restaurants_path, class: 'btn btn-success radius' %>
     <%= link_to "Best rating first", rating_restaurants_path, class: 'btn btn-success radius' %>
+    <div class="w-50">
+      <%= render 'search'%>
+    </div>
   </div>
 </div>
 

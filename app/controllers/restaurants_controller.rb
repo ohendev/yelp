@@ -1,7 +1,15 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update]
   def index
-    @restaurants = Restaurant.all
+      @restaurants = Restaurant.all
+  end
+
+  def search
+    if params[:search][:category].empty?
+      @restaurants = Restaurant.all
+    else
+      @restaurants = Restaurant.where(category: params[:search][:category])
+    end
   end
 
   def avis
@@ -60,6 +68,6 @@ class RestaurantsController < ApplicationController
     restaurant.reviews.each do |review|
       sum += review.rating
     end
-    return sum
+    return restaurant.reviews.size.positive? ? sum.fdiv(restaurant.reviews.size) : sum.fdiv(1)
   end
 end

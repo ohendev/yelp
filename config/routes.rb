@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get :avis
       get :rating
+      get :search
     end
     resources :reviews, only: [ :create ]
   end

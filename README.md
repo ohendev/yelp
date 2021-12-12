@@ -1,24 +1,6 @@
-# README
+# Restaurants List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Application is a Rails App that lists, filters and searches Restaurants in the database.
+It is a Le Wagon training's exercise.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
